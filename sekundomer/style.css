@@ -1,0 +1,30 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+.div2 {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.div2 button {
+  border: 1px solid greenyellow;
+  background-color: transparent;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 8px  10px;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
