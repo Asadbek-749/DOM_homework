@@ -1,0 +1,58 @@
+.container {
+  margin: 0 auto;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.door-frame {
+  width: 340px;
+  height: 600px;
+  border: 10px solid #444;
+  border-radius: 12px;
+  margin: 40px auto;
+  background: #222;
+  display: grid;
+}
+
+.door {
+  top: 10px;
+  left: 10px;
+  width: 320px;
+  height: 580px;
+  background: #8b5a2b;
+  border-radius: 6px;
+  position: relative;
+}
+
+.handle {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: gold;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.my-btn,
+.my-btn2 {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.my-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

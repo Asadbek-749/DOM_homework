@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Toggle Misol</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="div container">
+      <h1 id="sarlavha">Salom bering !</h1>
+      <button id="tugma">Salom berishni boshlash</button>
+    </div>
+
+    <script>
+      const sarlavha = document.getElementById("sarlavha");
+      const tugma = document.getElementById("tugma");
+      let ozgargan = false;
+      let id = null;
+
+      tugma.addEventListener("click", function () {
+        if (!ozgargan) {
+          id = setInterval(() => {
+            sarlavha.style.color = generateRandomHexColor();
+            sarlavha.textContent = "Salom berish boshlandi !";
+            let newP = document.createElement("p");
+            newP.textContent = "Salom Asadbek";
+            newP.style.color = generateRandomHexColor();
+            newP.style.fontSize = "28px";
+            newP.style.textAlign = "center";
+            document.body.appendChild(newP);
+          }, 2000);
+          ozgargan = true;
+        } else {
+          sarlavha.textContent = "Salom bering";
+          sarlavha.style.color = "black";
+          clearInterval(id);
+          ozgargan = false;
+        }
+      });
+
+      function generateRandomHexColor() {
+        let color = Math.floor(Math.random() * 16777215).toString(16);
+        return `#${color.padStart(6, "0")}`;
+      }
+    </script>
+  </body>
+</html>

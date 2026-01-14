@@ -1,0 +1,33 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
+}
+
+.animated-element {
+  position: absolute; 
+  top: 0;
+  transform: translateX(-50%); 
+  color: aqua;
+  text-align: center;
+  line-height: 100px;
+  animation-name: drop; 
+  animation-duration: 3s; 
+  animation-timing-function: linear; 
+  animation-fill-mode: forwards; 
+}
+
+
+@keyframes drop {
+  0% {
+    transform: translate(
+      -50%,
+      0
+    ); 
+  }
+  100% {
+    transform: translate(-50%, calc(100vh - 90%));
+    display: none; 
+  }
+}
